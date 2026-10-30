@@ -23,3 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+
+# Local binaries and scripts
+gh.exe
+git.bat
+iniciar.bat
+login-github.bat
+publicar.bat
