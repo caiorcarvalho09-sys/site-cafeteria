@@ -1,0 +1,182 @@
+.product-grid-section {
+  width: 100%;
+}
+
+.pos-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pos-product-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.22s ease;
+  cursor: pointer;
+}
+
+.pos-product-card:hover {
+  transform: translateY(-4px);
+  border-color: #b0c9b8;
+  box-shadow: var(--shadow-md);
+}
+
+.pos-product-card.has-items {
+  border-color: rgba(12, 74, 52, 0.4);
+}
+
+/* Badge de contagem no topo direito (igual imagem: 1, 3, 2 em verde/menta) */
+.product-qty-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background-color: #d8ede0;
+  color: var(--primary-green);
+  font-size: 0.76rem;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(12, 74, 52, 0.15);
+  z-index: 3;
+}
+
+/* Imagem do Produto centralizada */
+.product-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  padding: 0.5rem 0;
+}
+
+.product-img {
+  max-height: 115px;
+  max-width: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.pos-product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+/* Parte Inferior: Nome, Preço e Botão Redondo */
+.product-card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.product-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.product-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  line-height: 1.2;
+}
+
+.product-price {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Botão Redondo de Adicionar (+) */
+.product-plus-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  background-color: #ffffff;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.product-plus-btn:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: scale(1.08);
+}
+
+/* Quando já foi adicionado ao pedido: Verde Floresta com ícone branco */
+.product-plus-btn.active-plus {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(12, 74, 52, 0.25);
+}
+
+/* Estado vazio */
+.empty-catalog-state {
+  background-color: #ffffff;
+  border: 1.5px dashed var(--border-color);
+  border-radius: 20px;
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  max-width: 450px;
+  margin: 2rem auto;
+}
+
+.empty-catalog-icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.empty-catalog-state h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+
+.empty-catalog-state p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+  .pos-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pos-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  
+  .pos-product-card {
+    padding: 0.9rem;
+    min-height: 190px;
+  }
+}
+

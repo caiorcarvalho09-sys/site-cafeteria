@@ -1,0 +1,181 @@
+.category-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.8rem;
+}
+
+.category-hero-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.25rem 1.4rem;
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.category-hero-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #b9cdbf;
+}
+
+/* Pills no topo do card */
+.card-top-info {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.cat-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.28rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+}
+
+.pill-available {
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1.2px solid var(--border-color);
+}
+
+.pill-warning {
+  background-color: #fde8e8;
+  color: #e04b4b;
+  border: 1.2px solid #fbd5d5;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pill-warning .info-icon {
+  font-size: 0.8rem;
+}
+
+/* Título e Contagem */
+.cat-title-wrap {
+  z-index: 2;
+  margin-top: 1rem;
+}
+
+.cat-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+
+.cat-count {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Marca d'água vetorial artística */
+.cat-watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -15px;
+  width: 135px;
+  height: 135px;
+  pointer-events: none;
+  z-index: 1;
+  color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* ================= ESTADOS ATIVOS (IGUAL AOS SCREENSHOTS) ================= */
+
+/* Coffee Active: Verde Floresta Profundo */
+.coffee-card.active {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  box-shadow: 0 8px 24px rgba(12, 74, 52, 0.28);
+}
+
+.coffee-card.active .cat-title {
+  color: #ffffff;
+}
+
+.coffee-card.active .cat-count {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.coffee-card.active .pill-available {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.coffee-card.active .cat-watermark {
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* Tea Active: Salmão/Pêssego Coral (Imagem 4) */
+.tea-card.active {
+  background-color: #f29982;
+  border-color: #f29982;
+  box-shadow: 0 8px 24px rgba(242, 153, 130, 0.35);
+}
+
+.tea-card.active .cat-title {
+  color: #203529;
+}
+
+.tea-card.active .cat-count {
+  color: #3b5245;
+}
+
+.tea-card.active .pill-available {
+  border-color: rgba(32, 53, 41, 0.35);
+  color: #203529;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.tea-card.active .cat-watermark {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+/* Snack Active: Caramelo Mel/Ocre Quente (Imagem 5) */
+.snack-card.active {
+  background-color: #cb8e49;
+  border-color: #cb8e49;
+  box-shadow: 0 8px 24px rgba(203, 142, 73, 0.35);
+}
+
+.snack-card.active .cat-title {
+  color: #ffffff;
+}
+
+.snack-card.active .cat-count {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.snack-card.active .pill-warning {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.snack-card.active .cat-watermark {
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .category-nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,79 @@
+/* ========================================================
+   DESIGN SYSTEM & ESTILOS GLOBAIS - GREEN GROUNDS COFFEE POS
+   Inspirado 100% nas imagens de interface da cafeteria
+   ======================================================== */
+
+:root {
+  /* Cores Principais Extraídas dos Screenshots */
+  --primary-green: #0c4a34;          /* Verde Floresta Escuro (Coffee & Brand) */
+  --primary-green-light: #166548;
+  --primary-green-subtle: #d8ede0;   /* Menta suave para badges */
+  --accent-tea-coral: #f29982;       /* Salmão/Pêssego Coral do Chá (Img 4) */
+  --accent-snack-ochre: #cb8e49;     /* Dourado Ocre/Caramelo do Snack (Img 5) */
+  
+  /* Fundos e Superfícies */
+  --bg-frame: #49574a;               /* Fundo externo verde oliva / mockup */
+  --bg-canvas: #f4f6f0;              /* Fundo principal da interface (creme sutil) */
+  --bg-card: #ffffff;                /* Superfície dos cards brancos */
+  --bg-hover: #eef2ea;               /* Hover suave */
+
+  /* Linhas e Bordas */
+  --border-color: #dbe4dc;           /* Bordas finas e arredondadas dos cards */
+  --border-focus: #0c4a34;
+
+  /* Textos */
+  --text-dark: #1f3327;              /* Tipografia preta-esverdeada elegante */
+  --text-muted: #75867c;             /* Textos secundários e preços */
+  --text-white: #ffffff;
+
+  /* Tipografia */
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 6px rgba(12, 74, 52, 0.04);
+  --shadow-md: 0 6px 16px rgba(12, 74, 52, 0.08);
+  --shadow-lg: 0 14px 30px rgba(12, 74, 52, 0.12);
+
+  /* Transição Padrão */
+  --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-main);
+  background-color: var(--bg-frame);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Barra de rolagem estilizada */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd8ce;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9bead;
+}
+
+/* Base de Botões */
+button {
+  font-family: var(--font-main);
+}

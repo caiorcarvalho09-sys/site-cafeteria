@@ -1,0 +1,157 @@
+.customizer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 32, 24, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 3500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.customizer-box {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+  padding: 1.8rem;
+  border: 1.5px solid var(--border-color);
+  animation: scaleUp 0.2s ease-out;
+}
+
+.customizer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.customizer-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.customizer-thumb {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.customizer-title-wrap h3 {
+  font-size: 1.15rem;
+  color: var(--text-dark);
+}
+
+.customizer-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.customizer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.option-pill {
+  background-color: #f4f6f0;
+  border: 1.2px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-pill:hover {
+  border-color: var(--primary-green);
+}
+
+.option-pill.active {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: #ffffff;
+}
+
+.note-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-color);
+  background-color: #f8faf5;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.note-input:focus {
+  border-color: var(--primary-green);
+  background-color: #fff;
+}
+
+.customizer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+.btn-cancel {
+  background: none;
+  border: 1.5px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.btn-confirm {
+  background-color: var(--primary-green);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(12, 74, 52, 0.25);
+}
+

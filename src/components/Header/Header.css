@@ -1,0 +1,183 @@
+.pos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(216, 226, 218, 0.5);
+}
+
+.pos-header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.pos-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-svg-leaf {
+  width: 26px;
+  height: 26px;
+}
+
+.brand-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  color: var(--primary-green);
+  text-transform: uppercase;
+}
+
+.brand-title span {
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.pos-date-badge {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pos-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.pos-orders-counter {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.pos-orders-counter strong {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.pos-report-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  border: 1.5px solid var(--border-color);
+  padding: 0.6rem 1.1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.pos-report-btn:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: translateY(-1px);
+}
+
+.pos-icon-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.pos-icon-btn:hover {
+  border-color: var(--primary-green);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #e04b4b;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.pos-profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.profile-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.profile-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .pos-date-badge {
+    display: none;
+  }
+  .pos-orders-counter {
+    display: none;
+  }
+}
+
